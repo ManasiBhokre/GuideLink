@@ -1,0 +1,307 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/frame2"
+    android:padding="16dp">
+    
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        
+
+        <!-- Header Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:paddingBottom="16dp">
+            
+            <ImageButton
+                android:id="@+id/btn_back"
+                android:src="@drawable/baseline_arrow_back_24"
+                android:layout_gravity="start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="GuideLink"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+
+        </LinearLayout>
+        
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fill These Details"
+            android:textSize="18sp"
+            android:layout_gravity="center_horizontal"
+            android:paddingBottom="16dp"
+            android:textColor="@color/black"/>
+
+        <!-- User ID (Hidden or set programmatically) -->
+        <EditText
+            android:id="@+id/etUserId"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="gone"/>
+
+        <!-- Guide ID (Hidden or set programmatically) -->
+        <EditText
+            android:id="@+id/etGuideId"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="gone"/>
+
+        <!-- Preferred Tour Date with Date Selector -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Preferred Tour Date"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <EditText
+                android:id="@+id/etTourDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Select Date"
+                android:inputType="date"
+                android:focusable="false"/>
+
+            <ImageButton
+                android:id="@+id/btnSelectTourDate"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@android:drawable/ic_menu_my_calendar"
+                android:contentDescription="Select Date"/>
+        </LinearLayout>
+
+        <!-- Number of Travelers -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Number of Travelers"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <CheckBox
+                android:id="@+id/cbTravelerRange1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1-2"/>
+            <CheckBox
+                android:id="@+id/cbTravelerRange2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3-5"/>
+            <CheckBox
+                android:id="@+id/cbTravelerRange3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="6+"/>
+        </LinearLayout>
+
+        <!-- Language Preference -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Language Preference"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <CheckBox
+                android:id="@+id/cbLanguageEnglish"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="English"/>
+            <CheckBox
+                android:id="@+id/cbLanguageHindi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hindi"/>
+            <CheckBox
+                android:id="@+id/cbLanguageMarathi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Marathi"/>
+            <CheckBox
+                android:id="@+id/cbLanguageKonkani"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Konkani"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <CheckBox
+                android:id="@+id/cbLanguageTelugu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Telugu"/>
+            <CheckBox
+                android:id="@+id/cbLanguageUrdu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Urdu"/>
+            <CheckBox
+                android:id="@+id/cbLanguageMalwani"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Malwani"/>
+            <CheckBox
+                android:id="@+id/cbLanguageSindhi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sindhi"/>
+        </LinearLayout>
+
+        <!-- Age Range of Travelers -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Age Range of Travelers"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <CheckBox
+                android:id="@+id/cbAgeRangeChild"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Child (0-12)"/>
+            <CheckBox
+                android:id="@+id/cbAgeRangeTeen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Teenager (13-19)"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <CheckBox
+                android:id="@+id/cbAgeRangeAdult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Adult (20-64)"/>
+            <CheckBox
+                android:id="@+id/cbAgeRangeSenior"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Senior (65+)"/>
+        </LinearLayout>
+
+        <!-- Interests -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Interests"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <CheckBox
+                android:id="@+id/cbInterest1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="History"/>
+            <CheckBox
+                android:id="@+id/cbInterest2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nature"/>
+            <CheckBox
+                android:id="@+id/cbInterest3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Culture"/>
+        </LinearLayout>
+
+        <!-- Special Requests -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Special Requests"/>
+        <EditText
+            android:id="@+id/etSpecialRequests"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Any specific needs?"/>
+
+        <!-- Preferred Tour Duration -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Preferred Tour Duration"/>
+        <Spinner
+            android:id="@+id/spinnerTourDuration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/tour_duration_options"/>
+
+        <!-- Budget Range -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Budget Range"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/radioBudget1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Under Rs.2000"/>
+            <RadioButton
+                android:id="@+id/radioBudget2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rs.2000 - Rs.5000"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/radioBudget3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Above Rs.5000"/>
+        </LinearLayout>
+
+        <!-- Booking Agreement -->
+        <CheckBox
+            android:id="@+id/cbBookingAgreement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="I agree to the booking terms"/>
+
+        <!-- Submit Button -->
+        <Button
+            android:id="@+id/btnSubmitBooking"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Submit Booking"
+            android:backgroundTint="#0D384B"
+            android:textColor="@android:color/white"/>
+
+    </LinearLayout>
+    
+</ScrollView>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/frame2"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Back Button -->
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            android:src="@drawable/baseline_arrow_back_24"
+            android:layout_gravity="start" />
+
+        <!-- User Name -->
+        <EditText
+            android:id="@+id/et_user_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="User Name"
+            android:inputType="textPersonName"
+            android:layout_marginTop="16dp" />
+
+        <!-- User Email -->
+        <EditText
+            android:id="@+id/et_user_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="User Email"
+            android:inputType="textEmailAddress" />
+
+        <!-- User Contact -->
+        <EditText
+            android:id="@+id/et_user_contact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="User Contact"
+            android:inputType="phone" />
+
+        <!-- Save Changes Button -->
+        <Button
+            android:id="@+id/btn_save_profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save Changes"
+            android:backgroundTint="#0D384B"
+            android:layout_marginTop="16dp" />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/frame2">
+
+    <!-- Header Section -->
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <!-- Project Name -->
+        <TextView
+            android:id="@+id/tv_project_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GuideLink"
+            android:textColor="#000000"
+            android:textSize="25sp"
+            android:layout_marginTop="40dp"
+            android:layout_marginStart="40dp"/>
+
+        <!-- Logout Button -->
+        <Button
+            android:id="@+id/btn_logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Logout"
+            android:textColor="#000000"
+            android:background="@android:color/transparent"
+            android:layout_marginTop="35dp"
+            android:layout_marginStart="280dp"/>
+    </RelativeLayout>
+
+    <!-- Main Body Section with Tiles -->
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        android:rowCount="3"
+        android:columnCount="2"
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+
+        <!-- Edit Profile Tile -->
+        <LinearLayout
+            android:id="@+id/tile_edit_profile"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="16dp"
+            android:layout_marginTop="20dp"
+
+            android:layout_margin="8dp">
+            <ImageView
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:background="@drawable/profilelogo"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Edit Profile"
+                android:textSize="14sp"
+                android:layout_marginTop="10dp"/>
+        </LinearLayout>
+
+        <!-- Chatting Tile -->
+        <LinearLayout
+            android:id="@+id/tile_chatting"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="16dp"
+            android:layout_marginTop="20dp"
+            android:layout_margin="8dp">
+            <ImageView
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:src="@drawable/chatlogo"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Chatting"
+                android:textSize="14sp"
+                android:layout_marginTop="10dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tile_viewRequests"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="13dp"
+
+            android:layout_margin="8dp">
+            <ImageView
+                android:layout_width="57dp"
+                android:layout_height="57dp"
+                android:src="@drawable/requestlogo"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="View Requests"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <!-- Bookings Tile -->
+        <LinearLayout
+            android:id="@+id/tile_bookings"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="16dp"
+
+            android:layout_margin="8dp">
+            <ImageView
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:src="@drawable/bookinglogo"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bookings"
+                android:textSize="14sp"
+                android:layout_marginTop="10dp"/>
+        </LinearLayout>
+
+        <!-- View Ratings and Feedback Tile -->
+        <LinearLayout
+            android:id="@+id/tile_ratings_feedback"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="16dp"
+
+            android:layout_margin="8dp">
+            <ImageView
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:src="@drawable/ratinglogo"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="View Ratings and Feedback"
+                android:textSize="14sp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"/>
+        </LinearLayout>
+
+        <!-- View Itinerary Tile -->
+        <LinearLayout
+            android:id="@+id/tile_view_itinerary"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="16dp"
+
+            android:layout_margin="8dp">
+            <ImageView
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:src="@drawable/iternarylogo"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="View Itinerary"
+                android:textSize="14sp"
+                android:layout_marginTop="10dp"/>
+        </LinearLayout>
+
+    </GridLayout>
+
+</LinearLayout>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/frame2"
+    android:padding="30dp"   >
+
+    <!-- Main Header -->
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GUIDELINK"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:paddingBottom="20dp" />
+
+    <!-- Three Dots Menu Button -->
+    <ImageButton
+        android:id="@+id/btnMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_menu_24"
+        android:background="?attr/selectableItemBackground"
+        android:contentDescription="@string/menu_button" />
+
+    <ImageButton
+        android:id="@+id/logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_logout_24"
+        android:background="?attr/selectableItemBackground"
+        android:layout_toRightOf="@+id/header"
+        android:layout_marginLeft="56dp"
+        android:layout_alignParentTop="true"
+        android:contentDescription="Logout" />
+
+    <TextView
+        android:layout_marginTop="18dp"
+        android:layout_marginStart="280dp"
+        android:text="Logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"/>
+
+    <!-- Search View for searching spots or guides -->
+    <SearchView
+        android:id="@+id/searchView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header"
+        android:layout_marginTop="10dp" />
+
+    <!-- Search Results List View -->
+    <ListView
+        android:id="@+id/lvResults"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/searchView"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:id="@+id/tvRecommendedGuides"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Recommended Guides"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_below="@id/lvResults"
+        android:layout_marginTop="20dp"
+        android:paddingBottom="10dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvRecommendedGuides"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvRecommendedGuides"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal" />
+
+
+    <!-- Recommended Spots Header -->
+    <TextView
+        android:id="@+id/tvRecommended"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Recommended Spots"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_below="@id/rvRecommendedGuides"
+        android:layout_marginTop="20dp"
+        android:paddingBottom="10dp" />
+
+    <!-- Recommended Spots List View -->
+    <ListView
+        android:id="@+id/lvRecommendedSpots"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tvRecommended"
+        android:layout_marginTop="10dp" />
+</RelativeLayout>

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/frame2"
+        android:padding="50dp">
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Guide Registration"
+            android:textSize="30sp"
+            android:layout_marginStart="25dp"
+            android:layout_marginBottom="50dp"/>
+
+        <!-- Guide Name -->
+        <EditText
+            android:id="@+id/et_guide_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Full Name"
+            android:inputType="textPersonName" />
+
+        <!-- Guide Email -->
+        <EditText
+            android:id="@+id/et_guide_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:inputType="textEmailAddress" />
+
+        <!-- Guide Password -->
+        <EditText
+            android:id="@+id/et_guide_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:inputType="textPassword" />
+
+        <!-- Guide Contact -->
+        <EditText
+            android:id="@+id/et_guide_contact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Contact"
+            android:inputType="phone" />
+
+        <!-- Experience -->
+        <EditText
+            android:id="@+id/et_experience"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Experience in years"
+            android:inputType="number" />
+
+        <!-- City -->
+        <EditText
+            android:id="@+id/et_city"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="City"
+            android:inputType="text" />
+
+        <!-- Hourly Rate -->
+        <EditText
+            android:id="@+id/et_hourly_rate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Hourly Rate (in Rs.)"
+            android:inputType="numberDecimal" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <!-- Availability Spinner -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvavail"
+                android:textSize="18sp"
+                android:text="Availability: "/>
+            <Spinner
+                android:id="@+id/spinner_availability"
+                android:layout_width="200dp"
+                android:layout_marginLeft="20dp"
+                android:layout_height="40dp" />
+        </LinearLayout>
+        <!-- Language Preference -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:layout_marginTop="20dp"
+            android:text="Language Preference"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <CheckBox
+                android:id="@+id/cbLanguageEnglish"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="English"/>
+            <CheckBox
+                android:id="@+id/cbLanguageHindi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hindi"/>
+            <CheckBox
+                android:id="@+id/cbLanguageMarathi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Marathi"/>
+            <CheckBox
+                android:id="@+id/cbLanguageKonkani"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Konkani"/>
+        </LinearLayout>
+
+        <!-- Gender Radio Buttons -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gender" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioGroup
+            android:id="@+id/radio_group_gender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radio_male"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Male" />
+
+            <RadioButton
+                android:id="@+id/radio_female"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Female" />
+
+        </RadioGroup>
+    </LinearLayout>>
+
+        <!-- Upload Certificates Button -->
+        <Button
+            android:id="@+id/btn_upload_certificate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Upload Profile"
+            android:backgroundTint="#0D384B"/>
+
+        <!-- Profile Picture Preview -->
+        <ImageView
+            android:id="@+id/iv_profile_pic"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center"
+            android:contentDescription="Profile Picture Preview"
+            android:src="@android:drawable/ic_menu_camera" />
+
+        <!-- Register Button -->
+        <Button
+            android:id="@+id/btn_register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Register Guide"
+            android:backgroundTint="#0D384B"/>
+
+    </LinearLayout>
+</ScrollView>
